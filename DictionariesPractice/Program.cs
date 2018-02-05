@@ -90,24 +90,24 @@ namespace DictionariesPractice
             // The key will be the car's last name and the value
             // will be the car make. Print all key to console
 
-            Dictionary<string, string> car = new Dictionary<string, string>();
+            Dictionary<string, string> carCheck = new Dictionary<string, string>();
 
-            car.Add("Torres", "Toyota");
-            car.Add("Bryan", "Subaru");
-            car.Add("Robey", "Dodge");
-            car.Add("Javar", "Ford");
-            car.Add("Smith", "Nissan");
-            car.Add("Jones", "Isuzu");
-            car.Add("Kalani", "Chevy");
-            car.Add("Takaki", "Toyota");
-            car.Add("Simpson", "Ford");
-            car.Add("Hinnes", "Toyota");
+            carCheck.Add("Torres", "Toyota");
+            carCheck.Add("Bryan", "Subaru");
+            carCheck.Add("Robey", "Dodge");
+            carCheck.Add("Javar", "Ford");
+            carCheck.Add("Smith", "Nissan");
+            carCheck.Add("Jones", "Isuzu");
+            carCheck.Add("Kalani", "Chevy");
+            carCheck.Add("Takaki", "Toyota");
+            carCheck.Add("Simpson", "Ford");
+            carCheck.Add("Hinnes", "Toyota");
 
-            foreach (KeyValuePair<string, string> car in car) ;
+            foreach (KeyValuePair<string, string> car in carCheck)
             {
                 Console.WriteLine(car.Key);
             }
-            
+
 
 
 
@@ -115,6 +115,47 @@ namespace DictionariesPractice
             // the animal type and the value will be the number of that
             // animal type at the zoo. Print the animal with the highest
             // quantity at the console.
+            // 
+
+            Dictionary<string, int> zooAnimals = new Dictionary<string, int>()
+            {
+                {"Giraffe", 10 },
+                {"Gorilla", 13 },
+                {"Chimpanzee", 10 },
+                {"Otter", 23 },
+                {"Lion", 4 },
+                {"Tiger", 5 },
+                {"Black Bear", 12 },
+                {"Emu", 13 },
+                {"Bunny", 678 },
+                {"Armadillo", 2 }
+            };
+
+            // determine which animal had the highest value
+
+            int highest = 0;
+            foreach(KeyValuePair<string, int> animal in zooAnimals)
+            {
+                if(animal.Value > highest)
+                {
+                    highest = animal.Value;
+                }
+            }
+
+            //Console.WriteLine(highest);
+
+            foreach(KeyValuePair<string, int> animal in zooAnimals)
+
+            if (animal.Value == highest)
+            {
+                Console.WriteLine(animal.Key);
+            }
+
+
+            // ** HOMEWORK**
+
+
+
 
         }
     }
